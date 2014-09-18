@@ -7,18 +7,34 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/app.css">
+        <script src="https://developer.publish.buddymedia.com/js/sfdc.min.js"></script>
     </head>
     <body ng-controller="mainCtrl as main">
-      <div class="header">
-        <p class="header__title man pa2 text-white">Giphy App</p>
-      </div>
       <div class="controls">
+            
         <form ng-submit="main.search(query)">
-          <input ng-model="query" class="input" type="text" placeholder="Search giphy.com...">
+          <svg class="svg-search" version="1.1"
+               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+               x="0px" y="0px" width="26px" height="26px" viewBox="0 0 26 26" enable-background="new 0 0 26 26" xml:space="preserve">
+          <g>
+              <g>
+                  <path d="M25.2,22.1l-7-7c1-1.5,1.5-3.3,1.5-5.2c0-5.5-4.4-9.9-9.9-9.9C4.4,0,0,4.4,0,9.9c0,5.5,4.4,9.9,9.9,9.9
+                      c1.9,0,3.7-0.6,5.3-1.5l6.9,6.9c0.5,0.5,1.1,0.7,1.7,0.7h0c0.5,0,1.1-0.2,1.5-0.6c0.4-0.4,0.6-1,0.6-1.5
+                      C26,23.2,25.7,22.6,25.2,22.1z M15.4,9.9c0,3-2.5,5.5-5.5,5.5c-3,0-5.5-2.5-5.5-5.5c0-3,2.5-5.5,5.5-5.5
+                      C12.9,4.4,15.4,6.9,15.4,9.9z"/>
+              </g>
+          </g>
+          </svg>
+          <input ng-model="query" class="input" type="text" placeholder="Search for GIF's...">
         </form>
       </div>
       <div class="container">
-        <img class="gif" ng-src="http://media.giphy.com/media/{{ gif.id }}/giphy.gif" ng-repeat="gif in main.gifs">
+        <div ng-hide="main.gifs">
+          <img src="http://media.giphy.com/media/uy8wcOipBkZVK/giphy.gif">
+        </div>
+        <a class="gif-link" "main.sendToSocial( gif.id )" href ng-repeat="gif in main.gifs">
+          <img class="gif" ng-src="http://media.giphy.com/media/{{ gif.id }}/giphy.gif">
+        </a>
       </div>
       <script src="js/bundle.js"></script>
     </body>

@@ -8,7 +8,8 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden
+  overflow-x: hidden;
+  background: #FFF;
 }
 
 body {
@@ -18,11 +19,11 @@ body {
 .controls {
   width: 100%;
   padding: 10px;
+  border-bottom: 1px solid #CCC;
 }
 
 .container {
   width: 100%;
-  padding: 10px;
 }
 
 .gif {
@@ -33,16 +34,62 @@ body {
   display: block
 }
 
+.gif:hover :before {
+  background: blue;
+}
+
+.gif-link {
+  position: relative;
+  display: block;
+}
+
+.gif-link:after {
+  -webkit-translate: transform(0,-100%);
+}
+
+.gif-link:hover:after {
+  content:"Send to Social Studio";
+  font-size: 1.5rem;
+  text-align: center;
+  color: #FFF;
+  top: 50%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  -webkit-translate: transform(0,-100%);
+  transition: all 1s ease;
+}
+
+.no-search {
+  background: #000;
+}
+
+.svg-search {
+  display: inline-block;
+  width: 20px;
+  vertical-align: middle
+}
+
+.svg-search path {
+  fill: #CCC;
+}
+
 .header {
   background: #009CDF;
 }
 
 .input {
-  display: block;
-  width: 100%;
   padding: 5px 10px;
-  border: 1px solid #CCC;
+  border: 0px; 
   border-radius: 3px; 
+}
+
+.input:focus {
+    outline: 0;
+}
+
+.input:focus .svg-search path {
+    fill: #009CDF;
 }
 
 .man {
