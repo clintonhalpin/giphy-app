@@ -32,7 +32,7 @@
         <div ng-hide="main.gifs">
           <img src="http://media.giphy.com/media/uy8wcOipBkZVK/giphy.gif">
         </div>
-        <a class="gif-link" "main.sendToSocial( gif.id )" href ng-repeat="gif in main.gifs">
+        <a class="gif-link" href="http://media.giphy.com/media/{{ gif.id }}/giphy.gif" target="_blank" ng-repeat="gif in main.gifs">
           <img class="gif" ng-src="http://media.giphy.com/media/{{ gif.id }}/giphy.gif">
         </a>
       </div>

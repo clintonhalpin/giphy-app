@@ -43,25 +43,8 @@ body {
   display: block;
 }
 
-.gif-link:after {
-  -webkit-translate: transform(0,-100%);
-}
-
-.gif-link:hover:after {
-  content:"Send to Social Studio";
-  font-size: 1.5rem;
-  text-align: center;
-  color: #FFF;
-  top: 50%;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  -webkit-translate: transform(0,-100%);
-  transition: all 1s ease;
-}
-
-.no-search {
-  background: #000;
+.gif-link:hover img {
+  opacity: .8;
 }
 
 .svg-search {

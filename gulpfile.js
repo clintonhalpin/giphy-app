@@ -44,10 +44,6 @@ gulp.task('browserify', function() {
         path: './src/js/socialstudio.js',
         exports: 'socialstudio'
       }
-      uiRouter: {
-        path: './src/bower_components/angular-ui-router/release/angular-ui-router.min.js',
-        exports: 'uiRouter'
-      }
     }
   }).on('error', gutil.log)) 
   .pipe(concat('bundle.js'))

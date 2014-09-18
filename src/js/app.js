@@ -5,7 +5,6 @@ var uiRouter = require('uiRouter');
 var mainCtrl = require('../components/ctrl.mainCtrl.js');
 var giphy = require('../components/giphy.js');
 
-
 var app = angular.module('app', [ 'ui.router' ]);
 
 app.controller(
