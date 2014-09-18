@@ -1,7 +1,58 @@
 @import 'normalize';
 
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background: #5D5D5D;
-  color: white;
-  margin: 40px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden
+}
+
+body {
+  color: #555;
+}
+
+.controls {
+  width: 100%;
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+.gif {
+  width:100%;
+  overflow:hidden;
+  margin: 0;
+  padding: 0;
+  display: block
+}
+
+.header {
+  background: #009CDF;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #CCC;
+  border-radius: 3px; 
+}
+
+.man {
+  margin: 0;
+}
+
+.pa2 {
+  padding: 20px;
+}
+
+.text-white {
+  color: #FFF;
 }

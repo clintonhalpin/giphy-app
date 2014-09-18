@@ -3,6 +3,12 @@ function mainCtrl( $scope, giphy ) {
   giphy.search('grumpy cat').then(function(res){
     self.gifs = res.data.data;
   })
+
+  self.search = function(query) {
+      giphy.search(query).then(function(res){
+        self.gifs = res.data.data;
+      })
+  }
 }
 
 module.exports = mainCtrl;

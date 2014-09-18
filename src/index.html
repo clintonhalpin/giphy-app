@@ -9,7 +9,17 @@
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body ng-controller="mainCtrl as main">
-      <img ng-src="http://media.giphy.com/media/{{ gif.id }}/giphy.gif" ng-repeat="gif in main.gifs">
+      <div class="header">
+        <p class="header__title man pa2 text-white">Giphy App</p>
+      </div>
+      <div class="controls">
+        <form ng-submit="main.search(query)">
+          <input ng-model="query" class="input" type="text" placeholder="Search giphy.com...">
+        </form>
+      </div>
+      <div class="container">
+        <img class="gif" ng-src="http://media.giphy.com/media/{{ gif.id }}/giphy.gif" ng-repeat="gif in main.gifs">
+      </div>
       <script src="js/bundle.js"></script>
     </body>
 </html>
